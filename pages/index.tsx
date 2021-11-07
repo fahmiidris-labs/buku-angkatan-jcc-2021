@@ -15,7 +15,7 @@ const Home: NextPageWithLayout = () => {
               <blockquote>
                 <h4 className="text-base tracking-wide mb-1 text-gray-700">Untuk Peserta Jabar Coding Camp 2021</h4>
                 <h1 className="order-1 py-2 text-3xl md:text-5xl md:leading-none font-pop text-gray-700">
-                  <span className="text-gradient-primary">Buku Tahunan</span> Peserta JCC 2021
+                  <span className="text-gradient-primary">Buku Angkatan</span> Peserta JCC 2021
                 </h1>
                 <p className="order-2 leading-relaxed text-sm sm:text-base mr-6 text-gray-700">
                   Tinggal didesa, Rezeki kota, Skill mendunia.
