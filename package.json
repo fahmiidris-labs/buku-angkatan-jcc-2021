@@ -1,5 +1,5 @@
 {
-  "name": "buku-tahunan-jcc-2021",
+  "name": "buku-angkatan-jcc-2021",
   "private": true,
   "scripts": {
     "dev": "next dev",
