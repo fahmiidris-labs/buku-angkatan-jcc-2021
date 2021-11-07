@@ -5,7 +5,7 @@ import type { SeoType } from "@/types/app.type"
 const Seo: React.FC<SeoType> = ({
   title,
   robots = "follow, index",
-  description = "Tiga Tingkat merupakan platform switch schools, yang bertujuan membantu anak SMA untuk ikut menikmati pelajaran anak SMK, dan sebalik nya.",
+  description = "Website Buku Angkatan Peserta Jabar Coding Camp 2021.",
 }) => {
   return (
     <Head>

@@ -11,7 +11,7 @@ type MainType = {
 export const Main: React.FC<MainType> = ({ title, description, className, children }) => {
   return (
     <>
-      <Seo title={`${title} - Tiga Tingkat`} description={description} />
+      <Seo title={`${title} - Buku Angkatan`} description={description} />
       <main className={classNames("container", className)}>
         {children}
       </main>
