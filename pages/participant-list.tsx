@@ -8,6 +8,21 @@ import DATA from "@/data/main.json"
 import type { NextPageWithLayout } from "@/types/app.type"
 
 const Home: NextPageWithLayout = () => {
+
+  const keyStr =
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+
+const triplet = (e1: number, e2: number, e3: number) =>
+  keyStr.charAt(e1 >> 2) +
+  keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
+  keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
+  keyStr.charAt(e3 & 63)
+
+const rgbDataURL = (r: number, g: number, b: number) =>
+  `data:image/gif;base64,R0lGODlhAQABAPAA${
+    triplet(0, r, g) + triplet(b, 255, 255)
+  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`
+
   return (
     <Main title="List Peserta" className="relative pb-12 pt-24">
       <div className="min-h-screen">
@@ -24,7 +39,7 @@ const Home: NextPageWithLayout = () => {
             <div key={i}>
               <div className="group relative">
                 <div className="absolute rotate-3 rounded-xl z-10 w-full h-full bg-yellow-300/70"></div>
-                <Image src={item.Attachment} alt={item.Author} width={400} height={500} priority={true} className="z-20 object-cover rounded-xl" />
+                <Image src={item.Attachment} alt={item.Author} width={400} blurDataURL={rgbDataURL(2, 129, 210)} placeholder="blur" height={500} priority={true} className="z-20 object-cover rounded-xl" />
                 <button className="absolute z-30 bottom-4 right-3 bg-yellow-300 px-3 py-1 rounded-lg font-semibold text-sm">{item.Contact}</button>
               </div>
               <h1 className="text-base font-pop">{item.Author}</h1>
