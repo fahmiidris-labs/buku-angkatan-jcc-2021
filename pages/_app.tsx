@@ -9,7 +9,7 @@ import { AppPropsWithLayout } from "@/types/app.type"
 // Loading Progress using @badrap/bar-of-progress
 const progress = new ProgressBar({
   size: 2,
-  color: "#F43F5E",
+  color: "#22d3ee",
   className: "bar-of-progress",
   delay: 100,
 })
